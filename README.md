@@ -1,4 +1,4 @@
-# KCPD — Kernel-based Change Point Detection for Physiological Signals
+# KernelCPD — Kernel-based Change Point Detection for Physiological Signals
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -32,30 +32,7 @@ combines three complementary distance measures.
 
 ### Pipeline Overview (Algorithm 1)
 
-```
-Raw Signals (ECG, PPG, Resp, EDA, Temp)
-    │
-    ▼
-Signal Quality Assessment ──► Gate low-quality segments
-    │
-    ▼
-Sliding Window Feature Extraction (W=30s, Δ=1s) ──► 19 features × T windows
-    │
-    ▼
-KernelCPD Segmentation (Gaussian RBF, β=1, m=10) ──► K regime boundaries
-    │
-    ▼
-Pairwise Regime Comparison:
-  ├── DTW distance        (shape similarity)
-  ├── RuLSIF divergence   (distributional shift)
-  └── Cohen's d           (mean shift magnitude)
-    │
-    ▼
-Consensus RDI ──► Within-subject z-normalization ──► Outlier regime detection
-    │
-    ▼
-Permutation Test (n=10,000) ──► Statistical validation (p-value, effect size)
-```
+![Pipeline Schematic](docs/pipeline_schematic.png)
 
 ---
 
@@ -209,5 +186,5 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 
 ## Acknowledgments
 
-Toyota Research Institute of North America (TRINA) — Electronics Research Department
-MIRISE Technologies — Research support
+- **Toyota Research Institute of North America (TRINA)** — Electronics Research Department
+- **MIRISE Technologies** — Research support
