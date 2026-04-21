@@ -78,9 +78,8 @@ combines three complementary distance measures.
 ├── data/                              # Data directory (not included)
 │   └── README.md                      # Download instructions & DOI
 │
-└── docs/                              # Paper PDFs
-    ├── paper.pdf                      # Main manuscript
-    └── supplementary.pdf              # Supplementary material
+└── docs/                              # Documentation assets
+    └── pipeline_schematic.png         # Pipeline overview diagram
 ```
 
 ---
