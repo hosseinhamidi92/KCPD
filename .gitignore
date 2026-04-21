@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+.DS_Store
+output/
+data/*.txt
+data/*.xlsx
+data/WESAD/
