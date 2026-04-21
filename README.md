@@ -30,7 +30,7 @@ combines three complementary distance measures.
 - **Cross-dataset generalization**: Validated on both the driving dataset and
   the public WESAD dataset.
 
-### Pipeline Overview (Algorithm 1)
+### Pipeline Overview
 
 ![Pipeline Schematic](docs/pipeline_schematic.png)
 
